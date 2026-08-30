@@ -1,4 +1,4 @@
-Absolutely — here is the same content cleaned up into a **beautiful, visual Markdown/README format**, while keeping it useful as system-design notes.
+
 
 # 🌍 CDN — Content Delivery Network
 
