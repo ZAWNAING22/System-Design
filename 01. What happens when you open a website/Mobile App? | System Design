@@ -1,0 +1,56 @@
+```markdown
+# How DNS & App Network Requests Work
+
+A summary of how mobile client applications resolve domain names and fetch data from backend servers.
+
+---
+
+## 1. High-Level Request Flow
+
+
+```
+
+[User taps app]
+↓
+[App sends API request]
+↓
+[Phone asks DNS server]
+↓
+[DNS replies with IP]
+↓
+[App connects to that IP]
+
+```
+
+* **Step 1: User taps app**
+  * Handled by the mobile OS / RAM.
+* **Step 2: App sends API request**
+  * Example: `GET api.hotstar.com/homefeed` (Client → Server).
+* **Step 3: Phone asks DNS server**
+  * Resolves domain name: *"What is the IP of `api.hotstar.com`?"*
+* **Step 4: DNS replies**
+  * Returns target IP address: `142.xxx.xxx.xxx`.
+* **Step 5: App connects to that IP**
+  * Connects (often routed through a **Load Balancer**) to retrieve:
+    * Videos
+    * Posts
+    * Recommendations
+    * Notifications
+
+---
+
+## 2. DNS Resolution Hierarchy
+
+When a client queries a domain name, the lookup traverses the following components:
+
+1. **Recursive Resolver**
+   * Handled by the ISP or public providers (e.g., Google `8.8.8.8`).
+   * Acts as the middleman between the client and DNS hierarchy.
+2. **Root Server**
+   * Directs queries to the correct TLD server based on the top-level domain (there are 13 named root server clusters worldwide).
+3. **TLD (Top-Level Domain) Server**
+   * Manages domain extensions (e.g., `.com`, `.org`, `.net`) and points to the authoritative nameserver.
+4. **Authoritative Nameserver**
+   * Holds the actual DNS records (A, AAAA, CNAME) and returns the final IP address (`142.xxx.xxx.xxx`) back to the resolver.
+
+```
