@@ -16,4 +16,3 @@
 6. **Distributed Systems**
 (Microservices, Message Queue (Kafka), Sync vs Async, Event-driven)
 
-Screen clipping taken: 8/30/2026 8:55 PM
