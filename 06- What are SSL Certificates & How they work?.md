@@ -1,4 +1,4 @@
-Absolutely. Here is a cleaned-up **README-style note** for **SSL/TLS Certificates**, keeping the ideas from your notes but correcting the terminology where necessary.
+
 
 # 🔐 SSL/TLS Certificates — How HTTPS Works
 
