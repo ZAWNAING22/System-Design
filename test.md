@@ -1,5 +1,4 @@
 
-
 ## 📚 Core Pillars
 
 ### 1. 🌐 Networking & Edge
@@ -95,8 +94,3 @@ graph LR
 * **SDK vs API Architecture:** When to expose raw REST/GraphQL interfaces vs language-specific SDK wrappers.
 * **Distributed Event Streaming with Kafka:** Handling millions of real-time events, partitioning strategies, and consumer groups.
 
-```
-
-Would you like me to tailor any of the case studies with step-by-step low-level class designs or concrete schema definitions?
-
-```
