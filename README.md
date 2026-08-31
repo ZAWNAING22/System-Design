@@ -54,3 +54,6 @@ flowchart TD
     App2 -->|Produce Events| MQ
     MQ --> Worker
     Worker --> PrimaryDB
+---
+## 📚 Core Pillars
+---
