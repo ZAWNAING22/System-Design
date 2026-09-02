@@ -9,7 +9,7 @@ A modern quick-commerce system architecture (inspired by platforms like Blinkit)
 ```mermaid
 flowchart LR
     subgraph Clients["Clients"]
-        direction TB
+        direction TD
         C1["📱 Blinkit Mobile App"]
         C2["🌐 Web App"]
         C3["⌚ Partner / Rider App"]
